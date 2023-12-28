@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0j8qxiwjoqlt"]
+
+[ext_resource type="PackedScene" uid="uid://degri7fp4b1ip" path="res://roller/roller_world.tscn" id="1_s5t7h"]
+[ext_resource type="Script" path="res://roller/roller.gd" id="1_xtqcj"]
+[ext_resource type="Texture2D" uid="uid://d1s06reh7fhot" path="res://roller/mouse.png" id="2_tiigx"]
+
+[node name="Roller" type="ReferenceRect"]
+custom_minimum_size = Vector2(256, 256)
+offset_right = 256.0
+offset_bottom = 256.0
+script = ExtResource("1_xtqcj")
+metadata/_edit_lock_ = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+metadata/_edit_lock_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(256, 256)
+render_target_update_mode = 4
+
+[node name="RollerWorld" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_s5t7h")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 76.0
+grow_horizontal = 0
+texture = ExtResource("2_tiigx")
+expand_mode = 1
+stretch_mode = 5

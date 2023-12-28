@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://degri7fp4b1ip"]
+
+[ext_resource type="Script" path="res://roller/roller_world.gd" id="1_0dotv"]
+[ext_resource type="Texture2D" uid="uid://bdqkg36n3w08h" path="res://roller/kenney_prototype_texture_06_modified.png" id="2_gfxx0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61yhc"]
+shading_mode = 0
+albedo_texture = ExtResource("2_gfxx0")
+uv1_scale = Vector3(2, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_2vb4b"]
+
+[node name="RollerWorld" type="Node3D"]
+script = ExtResource("1_0dotv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Sphere" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_61yhc")
+mesh = SubResource("SphereMesh_2vb4b")

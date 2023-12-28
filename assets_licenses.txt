@@ -1,0 +1,8 @@
+Grid texture:
+https://www.kenney.nl/assets/prototype-textures
+
+Mouse:
+https://commons.wikimedia.org/wiki/File:Mouse-mysz.svg
+
+Keyboard:
+https://commons.wikimedia.org/wiki/File:OLED_keyboard.jpg

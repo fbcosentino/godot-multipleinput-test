@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr3c2wttli8ph"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_3sykh"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3sykh")
+
+[node name="LabelMouse" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 168.0
+offset_right = 65.0
+offset_bottom = 191.0
+rotation = -1.5708
+text = "MOUSE"
+
+[node name="MouseScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 40.0
+offset_bottom = 280.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MouseScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LabelKeyboard" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 504.0
+offset_right = 65.0
+offset_bottom = 527.0
+rotation = -1.5708
+text = "KEYBOARD"
+
+[node name="KeyboardScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 336.0
+offset_bottom = 616.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="KeyboardScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3

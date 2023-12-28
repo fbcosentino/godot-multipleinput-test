@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://bamyu6h8rtkch"]
+
+[ext_resource type="Script" path="res://typer/typer.gd" id="1_udy86"]
+[ext_resource type="Texture2D" uid="uid://vv118rgc0mek" path="res://typer/keyboard.png" id="2_32iu3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwygw"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="Typer" type="ReferenceRect"]
+custom_minimum_size = Vector2(256, 256)
+offset_right = 256.0
+offset_bottom = 256.0
+script = ExtResource("1_udy86")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nwygw")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+autowrap_mode = 1
+clip_text = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -84.0
+offset_top = 7.0
+offset_right = -5.0
+offset_bottom = 45.0
+grow_horizontal = 0
+texture = ExtResource("2_32iu3")
+expand_mode = 1
+stretch_mode = 5
